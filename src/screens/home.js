@@ -5,7 +5,7 @@ class Test extends Component {
     console.log(this.props)
     return (
       <div className="App">
-        <p>Route Test</p>
+        <p>Home</p>
       </div>
     )
   }

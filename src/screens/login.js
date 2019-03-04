@@ -4,6 +4,10 @@ import LoginForm from '../components/loginForm'
 
 import { isEmail, isPassword } from '../utils/regexs'
 
+import './login.css'
+
+const spread = ['ok', 'okok']
+
 class App extends Component {
   state = {
     counter: 0,
@@ -38,19 +42,15 @@ class App extends Component {
       alert('inserez password')
       return
     }
-    this.props.history.push('/testRoute')
-  }
 
-  componentWillUnmount() {
-    console.log('adieu')
-  }
+    //simulation d'appel Api Login
 
-  changePage = () => {
-    this.props.history.push('/testRoute')
+    localStorage.setItem('token', 'ceciesttoken')
+    this.props.history.push('/home')
   }
 
   render() {
-    console.log(this.props)
+    console.log(...spread)
     return (
       <div className="App">
         <LoginForm submit={this.submit} inputHandler={this.inputHandler} />

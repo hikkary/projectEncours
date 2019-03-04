@@ -6,7 +6,9 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Test from '../screens/testRoute'
+import PrivateRoute from '../utils/privateRoute'
+
+import Home from '../screens/home'
 import Login from '../screens/login'
 
 export default class Routes extends React.Component {
@@ -15,7 +17,7 @@ export default class Routes extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route exact path="/testRoute" component={Test} />
+          <PrivateRoute path="/home" component={Home} />
           <Redirect to="/" />
         </Switch>
       </Router>
