@@ -15,10 +15,6 @@ class App extends Component {
     password: ''
   }
 
-  componentDidMount() {
-    console.log('coucou')
-  }
-
   addToCounter = number => {
     this.setState({ counter: this.state.counter + number })
   }

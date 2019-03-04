@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 
-class Test extends Component {
+import Header from '../components/header'
+
+class Home extends Component {
   render() {
     console.log(this.props)
     return (
       <div className="App">
-        <p>Home</p>
+        <Header />
       </div>
     )
   }
 }
 
-export default Test
+export default Home
