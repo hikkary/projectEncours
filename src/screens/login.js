@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 
-import LoginForm from './components/loginForm'
+import LoginForm from '../components/loginForm'
 
-import { isEmail, isPassword } from '../src/utils/regexs'
-
-import './App.css'
+import { isEmail, isPassword } from '../utils/regexs'
 
 class App extends Component {
   state = {
@@ -40,12 +38,23 @@ class App extends Component {
       alert('inserez password')
       return
     }
+    this.props.history.push('/testRoute')
+  }
+
+  componentWillUnmount() {
+    console.log('adieu')
+  }
+
+  changePage = () => {
+    this.props.history.push('/testRoute')
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="App">
         <LoginForm submit={this.submit} inputHandler={this.inputHandler} />
+        <button onClick={this.changePage} />
       </div>
     )
   }
