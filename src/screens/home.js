@@ -1,22 +1,41 @@
 import React, { Component } from 'react'
 
 import Layout from './layout'
-import { Counter } from '../components/counters'
+import { CounterProps } from '../components/counters'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import allTheActions from '../actions'
 
 class Home extends Component {
   componentDidMount() {
-    this.props.actions.counter.incrementCounter()
+    // this.props.actions.counter.incrementCounter()
   }
 
   render() {
     console.log(this.props)
     return (
       <Layout>
-        <Counter name="gryffondor" />
-        <Counter name="serpentard" />
+        <CounterProps
+          name="gryffondor"
+          counter={this.props.counter.countG}
+          addToCounterIncrement={() =>
+            this.props.actions.counter.incrementCounter('countG')
+          }
+          addToCounterDecrement={() =>
+            this.props.actions.counter.decrementCounter('countG')
+          }
+        />
+
+        <CounterProps
+          name="serpentard"
+          counter={this.props.counter.countS}
+          addToCounterDecrement={() =>
+            this.props.actions.counter.decrementCounter('countS')
+          }
+          addToCounterIncrement={() =>
+            this.props.actions.counter.incrementCounter('countS')
+          }
+        />
       </Layout>
     )
   }

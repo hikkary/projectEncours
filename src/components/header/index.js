@@ -19,6 +19,9 @@ class Header extends React.Component {
         <Link className="menuHeader" to="/houses/gryffindor">
           <span>maisons</span>
         </Link>
+        <Link className="menuHeader" to="/ranking">
+          <span>classement</span>
+        </Link>
         <span className="disconnect" onClick={this.disconnect}>
           deconnexion
         </span>
