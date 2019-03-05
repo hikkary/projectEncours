@@ -10,17 +10,20 @@ class Counter extends Component {
   render() {
     return (
       <div className="counter">
+        <p>{this.props.name}</p>
         <p>{this.state.counter}</p>
-        <button
-          onClick={() => this.setState({ counter: this.state.counter + 1 })}
-        >
-          +
-        </button>
-        <button
-          onClick={() => this.setState({ counter: this.state.counter - 1 })}
-        >
-          -
-        </button>
+        <div className="buttonCounterContainer">
+          <button
+            onClick={() => this.setState({ counter: this.state.counter + 1 })}
+          >
+            +
+          </button>
+          <button
+            onClick={() => this.setState({ counter: this.state.counter - 1 })}
+          >
+            -
+          </button>
+        </div>
       </div>
     )
   }

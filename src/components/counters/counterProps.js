@@ -13,6 +13,7 @@ class CounterProps extends Component {
   render() {
     return (
       <div className="counter">
+        <p>{this.props.name}</p>
         <p>{this.props.counter}</p>
         <button onClick={this.props.addToCounterIncrement}>+</button>
         <button onClick={this.props.addToCounterDecrement}>-</button>
