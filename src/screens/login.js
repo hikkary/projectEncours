@@ -4,15 +4,24 @@ import LoginForm from '../components/loginForm'
 
 import { isEmail, isPassword } from '../utils/regexs'
 
-import './login.css'
+import { CounterProps } from '../components/counters'
 
-const spread = ['ok', 'okok']
+import './login.css'
 
 class App extends Component {
   state = {
     counter: 0,
     email: '',
-    password: ''
+    password: '',
+    isLogged: null
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem('token')) {
+      this.props.history.push('/home')
+    } else {
+      this.setState({ isLogged: false })
+    }
   }
 
   addToCounter = number => {
@@ -46,10 +55,14 @@ class App extends Component {
   }
 
   render() {
-    console.log(...spread)
+    if (this.state.isLogged === null) {
+      return null
+    }
+
     return (
       <div className="App">
         <LoginForm submit={this.submit} inputHandler={this.inputHandler} />
+        <CounterProps counter="0" />
         <button onClick={this.changePage} />
       </div>
     )

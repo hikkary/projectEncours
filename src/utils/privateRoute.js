@@ -3,23 +3,13 @@ import React from 'react'
 import isUserConnected from './isUserConnected'
 import { Redirect, Route } from 'react-router-dom'
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      isUserConnected() === true ? (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{
-            pathname: '/',
-            state: { from: props.location }
-          }}
-        />
-      )
-    }
-  />
-)
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  if (isUserConnected() === true) {
+    return <Route {...rest} render={props => <Component {...props} />} />
+  } else {
+    return <Redirect to="/" />
+  }
+}
 
 // PrivateRoute.propTypes = {
 //   component: PropTypes.any,

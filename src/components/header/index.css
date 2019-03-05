@@ -2,7 +2,7 @@
   background-color: #282c34;
   height: 60px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -11,4 +11,10 @@
 
 .deco {
   cursor: pointer;
+}
+
+.menuHeader {
+  color: white;
+  text-decoration: none;
+  margin: 0px 5px;
 }

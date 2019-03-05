@@ -20,14 +20,3 @@
     transform: rotate(360deg);
   }
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.inputForm {
-  margin: 20px;
-  height: 30px;
-}

@@ -4,6 +4,7 @@ class LoginForm extends Component {
   render() {
     return (
       <form className="form" onSubmit={this.props.submit}>
+        <p>{this.props.formName}</p>
         <input
           className="inputForm"
           type="text"

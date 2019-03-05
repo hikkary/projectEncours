@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import './counterProps.css'
 
 class CounterProps extends Component {
+  static propTypes = {
+    counter: PropTypes.number.isRequired,
+    addToCounterDecrement: PropTypes.func,
+    addToCounterIncrement: PropTypes.func
+  }
+
   render() {
     return (
       <div className="counter">
@@ -13,5 +20,11 @@ class CounterProps extends Component {
     )
   }
 }
+
+// CounterProps.propTypes = {
+//   counter: PropTypes.number,
+//   addToCounterDecrement: PropTypes.func,
+//   addToCounterIncrement: PropTypes.func
+// }
 
 export default CounterProps

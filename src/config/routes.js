@@ -19,7 +19,7 @@ export default class Routes extends React.Component {
         <Switch>
           <Route exact path="/" component={Login} />
           <PrivateRoute path="/home" component={Home} />
-          <PrivateRoute path="/houses" component={Houses} />
+          <PrivateRoute path="/houses/:name" component={Houses} />
           <Redirect to="/" />
         </Switch>
       </Router>
