@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case INCREMENT_COUNTER:
       return { ...state, [action.payload]: state[action.payload] + 1 }
     case DECREMENT_COUNTER:
-      return { ...state, count: state.count - 1 }
+      return { ...state, [action.payload]: state[action.payload] - 1 }
     default:
       return state
   }

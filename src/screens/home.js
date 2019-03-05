@@ -8,6 +8,7 @@ import allTheActions from '../actions'
 
 class Home extends Component {
   componentDidMount() {
+    this.props.actions.harry.getCharacters()
     // this.props.actions.counter.incrementCounter()
   }
 
@@ -36,18 +37,30 @@ class Home extends Component {
             this.props.actions.counter.incrementCounter('countS')
           }
         />
+        {this.props.harry.errorMessage ? (
+          <p>{this.props.harry.errorMessage}</p>
+        ) : null}
+        {!this.props.harry.isLoading ? (
+          this.props.harry.characters.map((character, key) => {
+            return <p key={key}>{character.name}</p>
+          })
+        ) : (
+          <p>Data en cours de chargement</p>
+        )}
       </Layout>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  counter: state.counter
+  counter: state.counter,
+  harry: state.harry
 })
 
 const mapDispatchToProps = () => dispatch => ({
   actions: {
-    counter: bindActionCreators(allTheActions.counter, dispatch)
+    counter: bindActionCreators(allTheActions.counter, dispatch),
+    harry: bindActionCreators(allTheActions.harry, dispatch)
   }
 })
 
