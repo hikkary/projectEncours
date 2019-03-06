@@ -1,26 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
+import { withTranslation } from 'react-i18next'
 
 import './index.css'
 
 class Header extends React.Component {
   disconnect = () => {
+    const { history } = this.props
     localStorage.removeItem('token')
-    this.props.history.push('/')
+    history.push('/')
   }
 
   render() {
+    const { t, history } = this.props
     return (
       <header className="App-header">
         <Link className="menuHeader" to="/characters">
-          <span>Acceuil</span>
+          <span>{t('menu.home')}</span>
         </Link>
         <Link className="menuHeader" to="/houses/gryffindor">
-          <span>maisons</span>
+          <span>{t('menu.houses')}</span>
         </Link>
         <Link className="menuHeader" to="/ranking">
-          <span>classement</span>
+          <span>{t('menu.ranking')}</span>
+        </Link>
+        <Link className="menuHeader" to="/options">
+          <span>{t('menu.options')}</span>
         </Link>
         <span className="disconnect" onClick={this.disconnect}>
           deconnexion
@@ -30,4 +36,6 @@ class Header extends React.Component {
   }
 }
 
-export default withRouter(Header)
+const HeaderRouter = withRouter(Header)
+
+export default withTranslation()(HeaderRouter)

@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "menu": {
+      "home": "home",
+      "houses": "houses",
+      "ranking": "ranking",
+      "options": "options"
+    },
+    "numberHouse": "there is {{count}} student in house {{house}}",
+    "numberHouse_plural": "there is {{count}} students in house {{house}}"
+  }
+}

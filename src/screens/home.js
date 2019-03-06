@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Layout from './layout'
 import { CounterProps } from '../components/counters'
+
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import allTheActions from '../actions'
@@ -53,14 +54,12 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  counter: state.counter,
-  harry: state.harry
+  counter: state.counter
 })
 
 const mapDispatchToProps = () => dispatch => ({
   actions: {
-    counter: bindActionCreators(allTheActions.counter, dispatch),
-    harry: bindActionCreators(allTheActions.harry, dispatch)
+    counter: bindActionCreators(allTheActions.counter, dispatch)
   }
 })
 

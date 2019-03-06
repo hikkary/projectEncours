@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+import { withTranslation } from 'react-i18next'
 import Layout from './layout'
 
 class Home extends Component {
   state = {
-    characters: null
+    characters: []
   }
 
   componentDidMount() {
@@ -42,7 +43,8 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.props.match)
+    console.log(this.props)
+    const { t } = this.props
     return (
       <Layout>
         <Link to="slytherin">serpentard</Link>
@@ -55,9 +57,15 @@ class Home extends Component {
         ) : (
           <p>pas de data disponible</p>
         )}
+        <p>
+          {t('numberHouse', {
+            count: this.state.characters.length,
+            house: this.props.match.params.name
+          })}
+        </p>
       </Layout>
     )
   }
 }
 
-export default Home
+export default withTranslation()(Home)

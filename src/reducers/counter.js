@@ -1,7 +1,6 @@
 import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions/counter'
 
 const initialState = {
-  fakeCount: 10,
   countG: 0,
   countS: 0
 }
