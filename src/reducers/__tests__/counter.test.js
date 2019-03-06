@@ -16,12 +16,4 @@ it('should initiate the state', () => {
   expect(actual).toEqual(expected)
 })
 
-it('should increment countG', () => {
-  const expected = {
-    ...initialState,
-    countG: initialState.countG + 1
-  }
-
-  const actual = reducer(undefined, incrementCounter('countG'))
-  expect(actual).toEqual(expected)
-})
+w
