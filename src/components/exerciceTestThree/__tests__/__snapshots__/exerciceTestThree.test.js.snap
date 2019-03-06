@@ -1,0 +1,616 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot (good Practice) 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Counter
+    counterNumber={0}
+    counterTitle="test"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <React.Fragment>
+        <div>
+          <span
+            className="commonText"
+          >
+            test
+          </span>
+        </div>
+        <div
+          className="counterNumberContainer"
+        >
+          <span
+            className="commonText"
+          >
+            0
+          </span>
+        </div>
+        <div>
+          <button
+            className="styledButton decrementButton"
+          >
+            <span
+              className="commonText"
+            >
+              -
+            </span>
+          </button>
+          <button
+            className="styledButton incrementButton"
+          >
+            <span
+              className="commonText"
+            >
+              +
+            </span>
+          </button>
+          <button
+            className="loadButton"
+            onClick={[Function]}
+          >
+            <span>
+              load
+            </span>
+          </button>
+        </div>
+      </React.Fragment>,
+      "className": "counterContainer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div>
+            <span
+              className="commonText"
+            >
+              test
+            </span>
+          </div>,
+          <div
+            className="counterNumberContainer"
+          >
+            <span
+              className="commonText"
+            >
+              0
+            </span>
+          </div>,
+          <div>
+            <button
+              className="styledButton decrementButton"
+            >
+              <span
+                className="commonText"
+              >
+                -
+              </span>
+            </button>
+            <button
+              className="styledButton incrementButton"
+            >
+              <span
+                className="commonText"
+              >
+                +
+              </span>
+            </button>
+            <button
+              className="loadButton"
+              onClick={[Function]}
+            >
+              <span>
+                load
+              </span>
+            </button>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <span
+              className="commonText"
+            >
+              test
+            </span>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test",
+              "className": "commonText",
+            },
+            "ref": null,
+            "rendered": "test",
+            "type": "span",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <span
+              className="commonText"
+            >
+              0
+            </span>,
+            "className": "counterNumberContainer",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": 0,
+              "className": "commonText",
+            },
+            "ref": null,
+            "rendered": 0,
+            "type": "span",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="styledButton decrementButton"
+              >
+                <span
+                  className="commonText"
+                >
+                  -
+                </span>
+              </button>,
+              <button
+                className="styledButton incrementButton"
+              >
+                <span
+                  className="commonText"
+                >
+                  +
+                </span>
+              </button>,
+              <button
+                className="loadButton"
+                onClick={[Function]}
+              >
+                <span>
+                  load
+                </span>
+              </button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span
+                  className="commonText"
+                >
+                  -
+                </span>,
+                "className": "styledButton decrementButton",
+                "onClick": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "-",
+                  "className": "commonText",
+                },
+                "ref": null,
+                "rendered": "-",
+                "type": "span",
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span
+                  className="commonText"
+                >
+                  +
+                </span>,
+                "className": "styledButton incrementButton",
+                "onClick": undefined,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "+",
+                  "className": "commonText",
+                },
+                "ref": null,
+                "rendered": "+",
+                "type": "span",
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  load
+                </span>,
+                "className": "loadButton",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "load",
+                },
+                "ref": null,
+                "rendered": "load",
+                "type": "span",
+              },
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <React.Fragment>
+          <div>
+            <span
+              className="commonText"
+            >
+              test
+            </span>
+          </div>
+          <div
+            className="counterNumberContainer"
+          >
+            <span
+              className="commonText"
+            >
+              0
+            </span>
+          </div>
+          <div>
+            <button
+              className="styledButton decrementButton"
+            >
+              <span
+                className="commonText"
+              >
+                -
+              </span>
+            </button>
+            <button
+              className="styledButton incrementButton"
+            >
+              <span
+                className="commonText"
+              >
+                +
+              </span>
+            </button>
+            <button
+              className="loadButton"
+              onClick={[Function]}
+            >
+              <span>
+                load
+              </span>
+            </button>
+          </div>
+        </React.Fragment>,
+        "className": "counterContainer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <div>
+              <span
+                className="commonText"
+              >
+                test
+              </span>
+            </div>,
+            <div
+              className="counterNumberContainer"
+            >
+              <span
+                className="commonText"
+              >
+                0
+              </span>
+            </div>,
+            <div>
+              <button
+                className="styledButton decrementButton"
+              >
+                <span
+                  className="commonText"
+                >
+                  -
+                </span>
+              </button>
+              <button
+                className="styledButton incrementButton"
+              >
+                <span
+                  className="commonText"
+                >
+                  +
+                </span>
+              </button>
+              <button
+                className="loadButton"
+                onClick={[Function]}
+              >
+                <span>
+                  load
+                </span>
+              </button>
+            </div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span
+                className="commonText"
+              >
+                test
+              </span>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test",
+                "className": "commonText",
+              },
+              "ref": null,
+              "rendered": "test",
+              "type": "span",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span
+                className="commonText"
+              >
+                0
+              </span>,
+              "className": "counterNumberContainer",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 0,
+                "className": "commonText",
+              },
+              "ref": null,
+              "rendered": 0,
+              "type": "span",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  className="styledButton decrementButton"
+                >
+                  <span
+                    className="commonText"
+                  >
+                    -
+                  </span>
+                </button>,
+                <button
+                  className="styledButton incrementButton"
+                >
+                  <span
+                    className="commonText"
+                  >
+                    +
+                  </span>
+                </button>,
+                <button
+                  className="loadButton"
+                  onClick={[Function]}
+                >
+                  <span>
+                    load
+                  </span>
+                </button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className="commonText"
+                  >
+                    -
+                  </span>,
+                  "className": "styledButton decrementButton",
+                  "onClick": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "-",
+                    "className": "commonText",
+                  },
+                  "ref": null,
+                  "rendered": "-",
+                  "type": "span",
+                },
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className="commonText"
+                  >
+                    +
+                  </span>,
+                  "className": "styledButton incrementButton",
+                  "onClick": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "+",
+                    "className": "commonText",
+                  },
+                  "ref": null,
+                  "rendered": "+",
+                  "type": "span",
+                },
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span>
+                    load
+                  </span>,
+                  "className": "loadButton",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "load",
+                  },
+                  "ref": null,
+                  "rendered": "load",
+                  "type": "span",
+                },
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": Symbol(react.fragment),
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
     "i18next": "^15.0.5",
     "prettier": "^1.16.4",
     "prettier-eslint-cli": "^4.7.1",
@@ -40,5 +42,14 @@
     "@storybook/addon-centered": "^5.0.0",
     "@storybook/react": "^5.0.0",
     "babel-loader": "^8.0.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
+    
 }

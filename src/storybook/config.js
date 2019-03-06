@@ -7,6 +7,8 @@ addDecorator(centered)
 function loadStories() {
   // requireAll(require.context('..', true, /_story\.jsx?$/))
   require('../components/loginForm/story.js')
+  require('../components/exerciceTestThree/story.js')
+
   // You can require as many stories as you need.
 }
 

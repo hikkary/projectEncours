@@ -61,7 +61,6 @@ const mapDispatchToProps = () => dispatch => ({
   actions: {
     counter: bindActionCreators(allTheActions.counter, dispatch)
   }
-})
 
 export default connect(
   mapStateToProps,
