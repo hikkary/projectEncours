@@ -4,15 +4,19 @@ import './index.css'
 import Routes from './config/routes'
 import * as serviceWorker from './serviceWorker'
 import { Provider } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
+
+import theme from './config/theme'
 
 import { store } from './config/store'
-
 import './config/translations'
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Routes />
-  </Provider>,
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <Routes />
+    </Provider>
+  </ThemeProvider>,
 
   document.getElementById('root')
 )

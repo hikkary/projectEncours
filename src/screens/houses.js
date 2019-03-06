@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import styled from 'styled-components'
 import { withTranslation } from 'react-i18next'
 import Layout from './layout'
+
+import Loader from '../components/loader'
+
+const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 class Home extends Component {
   state = {
@@ -47,6 +54,9 @@ class Home extends Component {
     const { t } = this.props
     return (
       <Layout>
+        <LoaderContainer>
+          <Loader />
+        </LoaderContainer>
         <Link to="slytherin">serpentard</Link>
         <Link to="gryffindor">gryffondor</Link>
         {this.state.characters ? (

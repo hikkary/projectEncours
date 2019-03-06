@@ -8,6 +8,7 @@
     "no-trailing-spaces": 2,
     "prefer-template": 2,
     "no-console": 1,
+    "react/prop-types": 0,
     "quotes": [2, "single", { "avoidEscape": true }],
     "react/no-redundant-should-component-update": 2,
     "react/sort-comp": 2,

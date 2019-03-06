@@ -1,11 +1,37 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import Layout from './layout'
 import { CounterProps } from '../components/counters'
-
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import allTheActions from '../actions'
+
+const StyledDiv = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: red;
+`
+const StyledDivProps = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: ${props => (props.color ? props.color : 'black')};
+`
+const StyledDivTheme = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: ${props => props.theme.color.gryffindorPrimary};
+`
+const Paragraph = styled.p`
+  color: blue;
+`
+
+const StyledDivThemeProps = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: ${props =>
+    props.color ? props.theme.color[props.color] : 'black'};
+`
 
 class Home extends Component {
   componentDidMount() {
@@ -38,6 +64,13 @@ class Home extends Component {
             this.props.actions.counter.incrementCounter('countS')
           }
         />
+        <StyledDiv />
+        <StyledDivProps color="yellow" />
+        <StyledDivProps />
+        <StyledDivTheme />
+        <StyledDivThemeProps color="slytherinPrimary" />
+        <StyledDivThemeProps color="hufflepuffPrimary" />
+        <Paragraph>Coucou</Paragraph>
         {this.props.harry.errorMessage ? (
           <p>{this.props.harry.errorMessage}</p>
         ) : null}
@@ -54,13 +87,16 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  counter: state.counter
+  counter: state.counter,
+  harry: state.harry
 })
 
 const mapDispatchToProps = () => dispatch => ({
   actions: {
-    counter: bindActionCreators(allTheActions.counter, dispatch)
+    counter: bindActionCreators(allTheActions.counter, dispatch),
+    harry: bindActionCreators(allTheActions.harry, dispatch)
   }
+})
 
 export default connect(
   mapStateToProps,
